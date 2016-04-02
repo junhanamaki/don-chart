@@ -1,16 +1,26 @@
 {
-  "name": "jquery-don-chart",
+  "name": "don-chart",
   "version": "1.0.0",
   "description": "another jQuery chart plugin",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:dist": "node_modules/.bin/webpack",
-    "build": "npm run build:dist"
+    "build:dist": "node_modules/.bin/webpack & NODE_ENV=production node_modules/.bin/webpack",
+    "rebuild:dist": "rm -rf dist & npm run build:dist",
+    "build": "npm run build:dist",
+    "rebuild": "npm run rebuild:dist"
   },
   "author": "",
   "license": "ISC",
+  "repository": "https://github.com/junhanamaki/don-chart",
   "devDependencies": {
+    "babel-istanbul-loader": "^0.1.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.6.0",
+    "eslint": "^2.6.0",
+    "eslint-config-airbnb": "^6.2.0",
+    "eslint-loader": "^1.3.0",
+    "eslint-plugin-react": "^4.2.3",
     "jquery": "^2.2.2",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
