@@ -1,0 +1,18 @@
+{
+  "name": "jquery-don-chart",
+  "version": "1.0.0",
+  "description": "another jQuery chart plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dist": "node_modules/.bin/webpack",
+    "build": "npm run build:dist"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jquery": "^2.2.2",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
+}
