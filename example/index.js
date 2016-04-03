@@ -1,3 +1,1 @@
-import $ from 'jquery';
-
-console.log($('div').length); // eslint-disable-line
+import '../src/index.js';
