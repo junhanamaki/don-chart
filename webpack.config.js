@@ -14,7 +14,7 @@ const conf = {
       loaders: [
         { loader: 'babel', test: /\.js$/, exclude: /node_modules/ },
         { loader: 'raw', test: /\.html$/, exclude: /node_modules/ },
-        { loader: ExtractTextPlugin.extract("style', 'css"), test: /\.css$/, exclude: /node_modules/ }
+        { loader: ExtractTextPlugin.extract('style', 'css'), test: /\.css$/, exclude: /node_modules/ }
       ]
     },
     externals: {

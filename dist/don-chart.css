@@ -1,0 +1,34 @@
+.don-chart.donut {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.don-chart.donut span {
+  text-align: center;
+  position: absolute;
+  line-height: 125px;
+  width: 100%;
+}
+
+.don-chart.donut svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.don-chart.donut circle {
+  fill: none;
+  stroke: lightgreen;
+  stroke-width: 10;
+  stroke-dasharray: 439;
+}
+
+.don-chart.donut circle.chart {
+  stroke: darkgreen;
+  animation: don-chart-chart-animation 1s ease-out;
+}
+
+@keyframes don-chart-chart-animation {
+  0% { stroke-dashoffset: 439; }
+}
