@@ -1,7 +1,7 @@
-import jQuery from 'jquery';
+import jquery from 'jquery';
 
 function donChart() {
-
+  jquery.show();
 }
 
-jQuery.fn.donChart = donChart;
+jquery.fn.donChart = donChart;
