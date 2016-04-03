@@ -1,1 +1,2 @@
-import '../src/index.js';
+// import '../src/index.js';
+jQuery(''); // eslint-disable-line
