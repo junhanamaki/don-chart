@@ -6,6 +6,7 @@ new webpack.ProvidePlugin({
 });
 
 const configurations = {
+
   production: {
     entry: resolve(__dirname, 'src/index.js'),
     output: {
@@ -24,6 +25,7 @@ const configurations = {
       new webpack.optimize.UglifyJsPlugin()
     ]
   },
+
   development: {
     entry: resolve(__dirname, 'src/index.js'),
     output: {
@@ -40,6 +42,7 @@ const configurations = {
     },
     devtool: 'hidden-source-map'
   },
+
   dev_server: {
     entry: resolve(__dirname, 'src/index.js'),
     output: {
@@ -56,6 +59,7 @@ const configurations = {
     },
     devtool: 'inline-source-map'
   }
+
 };
 
 module.exports = configurations[process.env.NODE_ENV || 'development'];
