@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const resolve = require('path').resolve;
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 const conf = {
 
@@ -11,14 +12,17 @@ const conf = {
     },
     module: {
       loaders: [
-        { loader: 'babel', test: /\.js$/, exclude: /node_modules/ }
+        { loader: 'babel', test: /\.js$/, exclude: /node_modules/ },
+        { loader: 'raw', test: /\.html$/, exclude: /node_modules/ },
+        { loader: ExtractTextPlugin.extract("style', 'css"), test: /\.css$/, exclude: /node_modules/ }
       ]
     },
     externals: {
       jquery: 'jQuery'
     },
     plugins: [
-      new webpack.optimize.UglifyJsPlugin()
+      new webpack.optimize.UglifyJsPlugin(),
+      new ExtractTextPlugin('don-chart.min.css')
     ]
   },
 
@@ -30,12 +34,17 @@ const conf = {
     },
     module: {
       loaders: [
-        { loader: 'babel', test: /\.js$/, exclude: /node_modules/ }
+        { loader: 'babel', test: /\.js$/, exclude: /node_modules/ },
+        { loader: 'raw', test: /\.html$/, exclude: /node_modules/ },
+        { loader: ExtractTextPlugin.extract('style', 'css'), test: /\.css$/, exclude: /node_modules/ }
       ]
     },
     externals: {
       jquery: 'jQuery'
     },
+    plugins: [
+      new ExtractTextPlugin('don-chart.css')
+    ],
     devtool: 'hidden-source-map'
   },
 
@@ -50,7 +59,9 @@ const conf = {
         { loader: 'eslint', test: /\.js$/, exclude: /node_modules/ }
       ],
       loaders: [
-        { loader: 'babel', test: /\.js$/, exclude: /node_modules/ }
+        { loader: 'babel', test: /\.js$/, exclude: /node_modules/ },
+        { loader: 'raw', test: /\.html$/, exclude: /node_modules/ },
+        { loader: 'style!css', test: /\.css$/, exclude: /node_modules/ }
       ]
     },
     externals: {

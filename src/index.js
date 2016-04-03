@@ -1,28 +1,21 @@
 import $ from 'jquery';
-import Chart from './Chart.js';
+import Manager from './Manager.js';
 
-const defaults = {
-  percentage: 100,
-};
-
-function getDataOptions($element) {
-  return {
-    percentage: $element.data('percentage'),
-  };
-}
-
-function initializer(userOptions) {
+$.fn.donChart = function plugin(args = {}) {
   return this.each(function initialize() {
+    // element as jquery object
     const $element = $(this);
-    const options = $.extend(defaults, getDataOptions($element), userOptions);
 
-    const chart = new Chart($element, options);
-    chart.draw();
+    // get options by merging data and args, priority to args
+    const options = $.extend($element.data(), args);
 
-    $element.data('don-chart', chart);
+    // init manager and call draw
+    const manager = new Manager($element, options);
+    manager.draw();
+
+    // store manager in element
+    $element.data('don-chart-manager', manager);
 
     return $element;
   });
-}
-
-$.fn.donChart = initializer;
+};
