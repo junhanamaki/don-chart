@@ -2,7 +2,7 @@
   "name": "don-chart",
   "version": "1.0.0",
   "description": "another jQuery chart plugin",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "start": "NODE_ENV=dev_server node_modules/.bin/webpack-dev-server --progress --content-base example",
     "test": "echo \"Error: no test specified\" && exit 1",
