@@ -42,7 +42,6 @@ const conf = {
   dev_server: {
     entry: resolve(__dirname, 'example/index.js'),
     output: {
-      path: resolve(__dirname, 'example/js'),
       filename: 'bundle.js'
     },
     module: {

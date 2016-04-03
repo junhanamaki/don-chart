@@ -1,5 +1,3 @@
-import jquery from 'jquery';
-
 function donChart() {
   jquery.showdsads();
 }

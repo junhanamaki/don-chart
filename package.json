@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clear:dist": "rm -rf dist",
     "clear": "npm run clear:dist",
-    "build:dist:dev": "NODE_ENV=development node_modules/.bin/webpack",
+    "build:dist:dev": "node_modules/.bin/webpack",
     "build:dist:prod": "NODE_ENV=production node_modules/.bin/webpack",
     "build:dist": "npm run build:dist:prod & npm run build:dist:dev",
     "build": "npm run build:dist",
