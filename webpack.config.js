@@ -58,9 +58,7 @@ const conf = {
     },
     plugins: [
       new webpack.ProvidePlugin({
-        $: 'jquery',
-        jQuery: 'jquery',
-        'window.jQuery': 'jquery'
+        jQuery: 'jquery'
       })
     ],
     devtool: 'inline-source-map'
