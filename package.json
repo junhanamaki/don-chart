@@ -4,13 +4,13 @@
   "description": "another jQuery chart plugin",
   "main": "index.js",
   "scripts": {
-    "start": "node_modules/.bin/webpack-dev-server --progress --content-base sample --config webpack.server.config.js",
+    "start": "NODE_ENV=dev_server node_modules/.bin/webpack-dev-server --progress --content-base example",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clear:dist": "rm -rf dist",
     "clear": "npm run clear:dist",
-    "build:dist:dev": "node_modules/.bin/webpack",
+    "build:dist:dev": "NODE_ENV=development node_modules/.bin/webpack",
     "build:dist:prod": "NODE_ENV=production node_modules/.bin/webpack",
-    "build:dist": "npm run build:dist:dev & npm run build:dist:prod",
+    "build:dist": "npm run build:dist:prod & npm run build:dist:dev",
     "build": "npm run build:dist",
     "rebuild:dist": "npm run clear:dist & npm run build:dist",
     "rebuild": "npm run rebuild:dist"
@@ -24,7 +24,6 @@
   "license": "ISC",
   "repository": "https://github.com/junhanamaki/don-chart",
   "devDependencies": {
-    "babel-istanbul-loader": "^0.1.0",
     "babel-loader": "^6.2.4",
     "babel-preset-es2015": "^6.6.0",
     "eslint": "^2.6.0",
