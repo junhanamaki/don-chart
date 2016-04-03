@@ -1,12 +1,6 @@
 const webpack = require('webpack');
 const resolve = require('path').resolve;
 
-new webpack.ProvidePlugin({
-  $: 'jquery',
-  jQuery: 'jquery',
-  'window.jQuery': 'jquery'
-});
-
 const conf = {
 
   production: {
@@ -21,7 +15,7 @@ const conf = {
       ]
     },
     externals: {
-      jquery: "jQuery"
+      jquery: 'jQuery'
     },
     plugins: [
       new webpack.optimize.UglifyJsPlugin()
@@ -40,7 +34,7 @@ const conf = {
       ]
     },
     externals: {
-      jquery: "jQuery"
+      jquery: 'jQuery'
     },
     devtool: 'hidden-source-map'
   },
@@ -60,8 +54,15 @@ const conf = {
       ]
     },
     externals: {
-      jquery: "jQuery"
+      jquery: 'jQuery'
     },
+    plugins: [
+      new webpack.ProvidePlugin({
+        $: 'jquery',
+        jQuery: 'jquery',
+        'window.jQuery': 'jquery'
+      })
+    ],
     devtool: 'inline-source-map'
   }
 

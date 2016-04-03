@@ -42,27 +42,15 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-	
-	var _jquery = __webpack_require__(1);
-	
-	var _jquery2 = _interopRequireDefault(_jquery);
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-	
-	function donChart() {
-	  _jquery2.default.show();
-	}
-	
-	_jquery2.default.fn.donChart = donChart;
-
-/***/ },
-/* 1 */
 /***/ function(module, exports) {
 
-	module.exports = jQuery;
+	"use strict";
+	
+	function donChart() {
+	  jquery.show();
+	}
+	
+	jquery.fn.donChart = donChart;
 
 /***/ }
 /******/ ]);
