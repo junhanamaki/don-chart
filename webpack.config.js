@@ -40,9 +40,10 @@ const conf = {
   },
 
   dev_server: {
-    entry: resolve(__dirname, 'example/index.js'),
+    entry: resolve(__dirname, 'src/index.js'),
     output: {
-      filename: 'bundle.js'
+      path: resolve(__dirname, 'dist'),
+      filename: 'don-chart.js'
     },
     module: {
       preLoaders:[
@@ -55,11 +56,6 @@ const conf = {
     externals: {
       jquery: 'jQuery'
     },
-    plugins: [
-      new webpack.ProvidePlugin({
-        jQuery: 'jquery'
-      })
-    ],
     devtool: 'inline-source-map'
   }
 

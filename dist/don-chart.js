@@ -42,15 +42,29 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports) {
+/***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
+	
+	var _jquery = __webpack_require__(1);
+	
+	var _jquery2 = _interopRequireDefault(_jquery);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	function donChart() {
-	  jquery.showdsads();
+	  _jquery2.default.showdsads();
 	}
 	
-	jquery.fn.donChart = donChart;
+	_jquery2.default.fn.donChart = donChart;
+	
+	window.kkk = _jquery2.default; // eslint-disable-line
+
+/***/ },
+/* 1 */
+/***/ function(module, exports) {
+
+	module.exports = jQuery;
 
 /***/ }
 /******/ ]);
