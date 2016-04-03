@@ -1,7 +1,28 @@
-import jquery from 'jquery';
+import $ from 'jquery';
+import Chart from './Chart.js';
 
-function donChart() {
-  jquery.showdsads();
+const defaults = {
+  percentage: 100,
+};
+
+function getDataOptions($element) {
+  return {
+    percentage: $element.data('percentage'),
+  };
 }
 
-jquery.fn.donChart = donChart;
+function initializer(userOptions) {
+  return this.each(function initialize() {
+    const $element = $(this);
+    const options = $.extend(defaults, getDataOptions($element), userOptions);
+
+    const chart = new Chart($element, options);
+    chart.draw();
+
+    $element.data('don-chart', chart);
+
+    return $element;
+  });
+}
+
+$.fn.donChart = initializer;

@@ -57,8 +57,6 @@
 	}
 	
 	_jquery2.default.fn.donChart = donChart;
-	
-	window.kkk = _jquery2.default; // eslint-disable-line
 
 /***/ },
 /* 1 */
