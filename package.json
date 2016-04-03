@@ -19,7 +19,7 @@
     "jquery",
     "jquery-plugin",
     "chart"
-],
+  ],
   "author": "jun.hanamaki@gmail.com",
   "license": "ISC",
   "repository": "https://github.com/junhanamaki/don-chart",

@@ -1,6 +1,10 @@
 const webpack = require('webpack');
 const resolve = require('path').resolve;
 
+new webpack.ProvidePlugin({
+  jQuery: "jquery",
+});
+
 const configurations = {
   production: {
     entry: resolve(__dirname, 'src/index.js'),
@@ -39,7 +43,7 @@ const configurations = {
   dev_server: {
     entry: resolve(__dirname, 'src/index.js'),
     output: {
-      path: resolve(__dirname, 'dist'),
+      path: resolve(__dirname, 'example/js'),
       filename: 'don-chart.js'
     },
     module: {
@@ -49,9 +53,6 @@ const configurations = {
       loaders: [
         { loader: 'babel', test: /\.js$/, exclude: /node_modules/ }
       ]
-    },
-    externals: {
-      jquery: "jQuery"
     },
     devtool: 'inline-source-map'
   }
