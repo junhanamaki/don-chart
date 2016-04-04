@@ -2,18 +2,15 @@
   "name": "don-chart",
   "version": "1.0.0",
   "description": "another jQuery chart plugin",
-  "main": "lib/index.js",
+  "main": "dist/don-chart.js",
   "scripts": {
     "start": "NODE_ENV=dev_server node_modules/.bin/webpack-dev-server --progress --content-base example",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clear:dist": "rm -rf dist",
-    "clear": "npm run clear:dist",
-    "build:dist:dev": "node_modules/.bin/webpack",
-    "build:dist:prod": "NODE_ENV=production node_modules/.bin/webpack",
-    "build:dist": "npm run build:dist:prod & npm run build:dist:dev",
-    "build": "npm run build:dist",
-    "rebuild:dist": "npm run clear:dist & npm run build:dist",
-    "rebuild": "npm run rebuild:dist"
+    "clear": "rm -rf dist",
+    "build:dev": "node_modules/.bin/webpack",
+    "build:prod": "NODE_ENV=production node_modules/.bin/webpack",
+    "build": "npm run build:prod & npm run build:dev",
+    "rebuild": "npm run clear & npm run build"
   },
   "keywords": [
     "jquery",
